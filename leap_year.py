@@ -1,23 +1,11 @@
 def leap_year():
-    import math
-    a = float(input("Ingrese el coeficiente A: "))
-    b = float(input("Ingrese el coeficiente B: "))
-    x1 = float(input("Ingrese el coeficiente X1: "))
-    x2 = float(input("Ingrese el coeficiente X2: "))
-    
-    
-    print (f"El coeficiente A de su ecuacion es: {a}")
-    print (f"El coeficiente B de su ecuacion es: {b}")
-    print (f"El coeficiente X1 de su ecuacion es: {x1}")
-    print (f"El coeficiente X2 de su ecuacion es: {x2}\n")
+                x= int(input("ingrese un año: "))
 
-    y1 = a * x1 + b
-    y2 = a * x2 + b
-    
-    distancia = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-    
-    print(f"\nPara la siguiente ecuación:\n\tY = {a}X + {b}")
-    print(f"\nDados los siguientes puntos:")
-    print(f"  P1 ({x1}, {y1})")
-    print(f"  P2 ({x2}, {y2})")
-    print(f"\nLa distancia entre ellos es: {distancia}")
+                if  (x%4==0 and x%100!=0 ):
+                    print (f"El año {x} es bisiesto")
+
+                elif  (x%400==0):
+                    print (f"El año {x} es bisiesto")
+
+                else:
+                    print(f"El año {x} no es bisiesto")
